@@ -12,9 +12,9 @@ public static void rec5 (int n)
 	else
 	{
 		cont++;   // O(1)    
-		rec5 (n-1);
-		rec5 (n-1);
-		rec5 (n-1);
+		rec5 (n-2);
+		rec5 (n-2);
+		rec5 (n-2);
 	}
 }
 

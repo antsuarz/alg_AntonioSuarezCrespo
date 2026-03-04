@@ -53,7 +53,7 @@ public class PuntosDyV {
         }
 
         if (numPuntosFranja > 1) {
-            rapirec(franja, 0, numPuntosFranja - 1, 1);
+            rapirec(franja, 0, numPuntosFranja - 1, 0);
         }
 
         for (int i = 0; i < numPuntosFranja; i++) {

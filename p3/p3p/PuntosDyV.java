@@ -17,7 +17,7 @@ public class PuntosDyV {
             String rutaFichero = args[0];
             double[][] puntos = LectorFicheros.leerFichero(rutaFichero);
 
-            rapirec(puntos, 0, puntos.length - 1, 1);
+            rapirec(puntos, 0, puntos.length - 1, 0);
 
             recursivoDyV(puntos, 0, puntos.length - 1);
 
@@ -53,7 +53,7 @@ public class PuntosDyV {
         }
 
         if (numPuntosFranja > 1) {
-            rapirec(franja, 0, numPuntosFranja - 1, 0);
+            rapirec(franja, 0, numPuntosFranja - 1, 1);
         }
 
         for (int i = 0; i < numPuntosFranja; i++) {

@@ -1,16 +1,19 @@
 package p3;
 
-public class Division1 {
+public class Division5 {
 
 	static long cont;
 
-	public static void rec1(int n) {
+	public static void rec3(int n) {
 		if (n <= 0)
 			cont++;
 		else {
-			for (int i = 1; i < n; i++)
+			for (int i = 1; i < n; i++) {
 				cont++; // O(n)
-			rec1(n / 3);
+			}
+			rec3(n / 2);
+			rec3(n / 2);
+			rec3(n / 2);
 		}
 
 	}
@@ -24,12 +27,14 @@ public class Division1 {
 
 			for (int repeticiones = 1; repeticiones <= nVeces; repeticiones++) {
 				cont = 0;
-				rec1(n);
+				rec3(n);
 			}
 
 			t2 = System.currentTimeMillis();
 
 			System.out.println(" n=" + n + "**TIEMPO=" + (t2 - t1) + "**nVeces=" + nVeces);
+
 		} // for
+
 	} // main
 } // class

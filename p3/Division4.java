@@ -1,6 +1,6 @@
 package p3;
 
-public class Division1 {
+public class Division4 {
 
 	static long cont;
 
@@ -8,8 +8,12 @@ public class Division1 {
 		if (n <= 0)
 			cont++;
 		else {
-			for (int i = 1; i < n; i++)
-				cont++; // O(n)
+			for (int i = 1; i < n; i++) {
+				for (int j = 1; j < n; j++) {
+					cont++; // O(n)
+				}
+
+			}
 			rec1(n / 3);
 		}
 
@@ -19,7 +23,7 @@ public class Division1 {
 		long t1, t2, cont;
 		int nVeces = Integer.parseInt(arg[0]);
 
-		for (int n = 1000000; n <= 1024000000; n *= 2) {
+		for (int n = 1000; n <= 1024000000; n *= 2) {
 			t1 = System.currentTimeMillis();
 
 			for (int repeticiones = 1; repeticiones <= nVeces; repeticiones++) {

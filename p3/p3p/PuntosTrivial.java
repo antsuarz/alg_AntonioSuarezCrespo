@@ -66,7 +66,6 @@ public class PuntosTrivial {
         double distMinima = calcularDistancia(p1Min, p2Min);
 
         result.add(p1Min);
-        result.add(p2Min);
 
         for (int i = 0; i < n; i++) {
             for (int j = i + 1; j < n; j++) {

@@ -17,8 +17,7 @@ public class PuntosDyV {
 
         String nombreFichero = args[0];
         List<Punto> puntos = leerPuntos(nombreFichero);
-        puntos.sort((p1, p2) -> Double.compare(p1.y, p2.y));
-        puntos.sort((p1, p2) -> Double.compare(p1.x, p2.x));
+        sortByMutualCloseness(puntos);
 
         if (puntos.isEmpty())
             return;
@@ -38,8 +37,9 @@ public class PuntosDyV {
         
         double dist = puntosDyV(puntos);
         System.out.printf("SU DISTANCIA MINIMA= %.6f%n", dist);
-    } 
-    
+    }
+
+
     static class Punto {
         double x, y;
 
@@ -54,7 +54,13 @@ public class PuntosDyV {
         }
     }
 
-
+    /**
+     * Solo funcionaria con una lista de puntos ordenados por distancia entre ellos
+     * a=2 //Número de llamadas recursivas 
+     * b=2 //Número entre el que se divide el problema
+     * k=0  //Complejidad del algoritmo sin tener en cuenta la recursividad
+     * Complejidad (Sin tener en cuenta ordenación) : O(n)
+     */
     public static double puntosDyV(List<Punto> puntos) {
         int n=puntos.size();
         
@@ -82,6 +88,7 @@ public class PuntosDyV {
         return Math.min(distIzq, distDer);
     }
     
+   
     /**
      * Calcula la distancia entre dos puntos dados
      * @param p1

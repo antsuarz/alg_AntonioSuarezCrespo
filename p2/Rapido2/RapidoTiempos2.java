@@ -5,7 +5,7 @@ para los 3 supuestos de orden inicial (ordenado, inverso y aleatorio)
 en el comando de ejecucion hay que poner la opcion elegida y
 despues hay que poner el numero de repeticiones deseado */
 
-public class InsercionTiemposBajos {
+public class RapidoTiempos2 {
 
 	static int[] v;
 
@@ -14,7 +14,7 @@ public class InsercionTiemposBajos {
 		String opcion = arg[0];
 		int repeticiones = Integer.parseInt(arg[1]);
 
-		for (int n = 200; n <= 1000; n += 5) {
+		for (int n = 10000; n < 100000000; n *= 2) {
 			v = new int[n];
 			long t = 0;
 
@@ -27,7 +27,7 @@ public class InsercionTiemposBajos {
 					Vector.ordenAleatorio(v);
 
 				t1 = System.currentTimeMillis();
-				Rapido.rapido(v);
+				Rapido2.rapido2(v);
 				t2 = System.currentTimeMillis();
 				t = t + (t2 - t1);
 			}

@@ -1,21 +1,21 @@
 package p3;
 
-public class Division3
+public class Division5
 {
 
 static long cont;
 
-public static void rec3 (int n)
+public static void rec5 (int n)
 	{
 		if (n<=0) 
 			cont++;
 		else
 		{ 
 			cont++;
-			rec(n/2);
-			rec(n/2);
-			rec(n/2);
-			rec(n/2);
+			rec5(n/2);
+			rec5(n/2);
+			rec5(n/2);
+			rec5(n/2);
 
 		}
 		   
@@ -34,7 +34,7 @@ public static void main (String arg [])
 		for (int repeticiones=1; repeticiones<=nVeces;repeticiones++)
 		{ 
 			cont=0;
-			rec3 (n);
+			rec5 (n);
 		} 
 
 		t2 = System.currentTimeMillis ();

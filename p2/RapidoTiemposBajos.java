@@ -14,7 +14,7 @@ public class RapidoTiemposBajos {
 		String opcion = arg[0];
 		int repeticiones = Integer.parseInt(arg[1]);
 
-		for (int n = 10; n <= 100; n += 5) {
+		for (int n = 200; n <= 1000; n += 5) {
 			v = new int[n];
 			long t = 0;
 

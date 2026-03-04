@@ -1,22 +1,22 @@
 package p3;
 
-public class Division3
+public class Division4
 {
 
 static long cont;
 
-public static void rec3 (int n)
+public static void rec4 (int n)
 	{
 		if (n<=0) 
 			cont++;
 		else
 		{ 
-			for (int i = 0; i < array.length; i++) {
-				for (int j = 0; j < array.length; j++) {
+			for (int i = 0; i < n; i++) {
+				for (int j = 0; j < n; j++) {
 					cont++;
 				}
 			}
-			rec(n/2);
+			rec4(n/2);
 		}
 		   
 	}
@@ -34,7 +34,7 @@ public static void main (String arg [])
 		for (int repeticiones=1; repeticiones<=nVeces;repeticiones++)
 		{ 
 			cont=0;
-			rec3 (n);
+			rec4 (n);
 		} 
 
 		t2 = System.currentTimeMillis ();

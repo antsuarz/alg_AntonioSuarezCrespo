@@ -30,7 +30,7 @@ public static void main (String arg [])
 	for (int repeticiones=1; repeticiones<=nVeces;repeticiones++)
 		{ 
 			cont=0;
-			rec2 (n);
+			rec4 (n);
 		} 
 
 	t2 = System.currentTimeMillis ();

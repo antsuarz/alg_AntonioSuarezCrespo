@@ -13,7 +13,7 @@ public static void rec3 (int n)
 	{
 		cont++;   // O(1)    
 		rec3 (n-1);
-		rec3 (n-1);
+		rec3 (n-1); 
 	}
 }
 
